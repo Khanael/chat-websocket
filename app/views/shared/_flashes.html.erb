@@ -1,0 +1,24 @@
+<% if notice %>
+  <div class="flashes-notice" role="alert">
+    <%= notice %>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    >
+    </button>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="flashes-alert" role="alert">
+    <%= alert %>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    >
+    </button>
+  </div>
+<% end %>
