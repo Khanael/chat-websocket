@@ -11,9 +11,10 @@
   </head>
 
   <body>
-    <%= link_to 'Accueil', :root %>
-    <%= render "shared/flashes" %>
-    <%= yield %>
-    <%= link_to 'Retour', :back %>
+    <%= render "shared/navbar" %>
+    <div class="container">
+      <%= render "shared/flashes" %>
+      <%= yield %>
+    </div>
   </body>
 </html>

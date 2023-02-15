@@ -1,14 +1,14 @@
 <div
-  class="container chatroom"
+  class="chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
 >
   <h1><%= @chatroom.name %></h1>
-  <ul class="messages" data-chatroom-subscription-target="messages">
+  <div class="messages" data-chatroom-subscription-target="messages">
     <% @messages.each do |message| %>
       <%= render "messages/message", message: message %>
     <% end %>
-  </ul>
+  </div>
 
   <%= simple_form_for [@chatroom, @message], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }} do |f| %>
     <%= f.input :content,

@@ -1,7 +1,9 @@
-<div id="message-<%= message.id %>">
-  <small>
-    <strong><%= message.user.nickname %></strong>
-    <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-  </small>
+<div class="message <%= message.user == current_user ? "my-message" : "" %>">
+  <div>
+    <p class="message--nickname"><b><%= message.user.nickname %></b>
+      -
+      <i><%= message.created_at.strftime("%l:%M %p") %></i></p>
+
+  </div>
   <p><%= message.content %></p>
 </div>

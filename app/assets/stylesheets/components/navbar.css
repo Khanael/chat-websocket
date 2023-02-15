@@ -1,0 +1,12 @@
+#navbar{
+  position: relative;
+  @apply flex flex-row justify-between items-center w-full border-b-2 h-14 px-3 z-10;
+}
+
+.nickname{
+  @apply text-gray-700 font-bold;
+}
+
+.navbar--menu{
+  @apply flex flex-row justify-between items-center gap-3;
+}
