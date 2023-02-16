@@ -1,8 +1,8 @@
-<div class="message <%= message.user == current_user ? "my-message" : "" %>">
+<div class="message <%= "my-message" if message.user == current_user %>">
   <div>
     <p class="message--nickname"><b><%= message.user.nickname %></b>
       -
-      <i><%= message.created_at.strftime("%l:%M %p") %></i></p>
+      <i><%= message.created_at.strftime("%k:%M") %></i></p>
 
   </div>
   <p><%= message.content %></p>

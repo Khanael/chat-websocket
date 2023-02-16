@@ -1,7 +1,7 @@
 <nav>
   <ul id="navbar">
     <li class="nickname">Bienvenue
-      <%= current_user.nickname %></li>
+      <%= current_user.nickname if current_user %></li>
     <div class="navbar--menu">
       <li><%= link_to "Home", root_path %></li>
       <% if current_user %>

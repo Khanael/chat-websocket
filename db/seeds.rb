@@ -15,9 +15,11 @@ p "Create Users"
 User.create!(email: "toto@toto.com", password: "azerty", nickname: "Toto")
 User.create!(email: "tata@tata.com", password: "azerty", nickname: "Tata")
 p "finish users"
+
 p "Create a chatroom"
 Chatroom.create!(name: "Général")
 p "Finish chatroom"
+
 p "Create messages"
 Message.create!(content: "Hello !", user: User.first, chatroom: Chatroom.first)
 Message.create!(content: "How are you ?", user: User.last, chatroom: Chatroom.first)
